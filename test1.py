@@ -6,6 +6,14 @@ class Employee:
         self.first_name = first_name
         self.second_name = second_name
         self.gender = gender
+        self.remaining_vacation_days = Employee.vacation_days
+
+    def consume_vacation(self, vacation_days_spend):
+        self.remaining_vacation_days -= vacation_days_spend
+        return self.remaining_vacation_days
+
+    def get_vacation_details(self):
+        return (f'Остаток отпускных дней: {self.remaining_vacation_days}.')
 
 
 # Создайте экземпляры класса Employee с различными значениями атрибутов.
