@@ -35,6 +35,7 @@ class PartTimeEmployee(Employee):
         super().__init__(first_name, second_name, gender)
         self.remaining_vacation_days = PartTimeEmployee.vacation_days
 
+
 # Пример использования:
 full_time_employee = FullTimeEmployee("Роберт", "Крузо", "м")
 print(full_time_employee.get_unpaid_vacation("2023-07-01", 5))
